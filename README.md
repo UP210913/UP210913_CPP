@@ -1,7 +1,8 @@
 # UP210913_CPP
-REPOSITORIO MATERIA DE PROGRAMACION
+##*Programming stuff repository
+Polytechnic University of Aguascalientes
+ISC03B. Will be used during the 3rd quarter.
 
-##Bienvenido al repositorio del Owaldo
 
 
 ![Cargando](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png)
