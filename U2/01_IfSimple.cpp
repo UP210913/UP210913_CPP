@@ -16,26 +16,18 @@ int main(){
     cin>>numero;
     if (numero == dato){
         cout<<"El número es igual a dato\n";
-    }else {
-        cout<<"El número no es igual a dato\n";
     }
 
     if (numero != dato){
         cout<<"El número es diferente a dato\n";
-    }else{
-        cout<<"El número no es diferente a dato\n";
     }
 
     if (numero < dato){
         cout<<"El número es menor a dato\n";
-    }else{
-        cout<<"El número no es menor a dato\n";
     }
 
     if (numero > dato){
         cout<<"El número es mayor a dato\n";
-    }else{
-        cout<<"El número no es mayor a dato\n";
     }
 
     return 0;
