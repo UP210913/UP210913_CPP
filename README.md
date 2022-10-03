@@ -1,7 +1,7 @@
 # UP210913_CPP
 ## Programming stuff repository.
 
-<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" width="200" height="200" />        <img src="https://sii.upa.edu.mx/image/icono/logo_upp.png" width="400" height="200" />
+<img src="https://sii.upa.edu.mx/image/icono/logo_upp.png" width="200" height="200" />                        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" width="400" height="200" />
 
 *Polytechnic University of Aguascalientes. 
 
