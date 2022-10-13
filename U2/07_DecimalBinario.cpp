@@ -9,27 +9,43 @@ Description: Program that ask to user a decimal number and translate it to binar
 using namespace std;
 
 int main(){
-    int decimal, d2, i=0, c;
-    string resultado;
+    int cont, cont2, numero, divisor, divisor2;
+    
+    cout<<"Ingresa el número a convertir en binario: ";
+    cin>>numero;
+    divisor=numero;
 
-    cout<<"Enter a integer number: ";
-    cin>>decimal;
-    d2=decimal;
-
-    while(decimal>0){
-        d2=decimal/2;
-        i++;
+    //Calculate how many times it can be divided
+    while(cont2>0){
+        cont2=divisor/2;
+        divisor=cont2;
+        cont++;
     }
-    int bin[i];
-    c=i;
-    for(i=0; i<=c; i++){
-        bin[i]=(decimal%2);
-        decimal/=2;
+    
+    //Create vector
+    int binario[cont];
+    cont=0;
+    divisor=numero;
+    cont2=1;
+    
+    //Save remainders for binary number
+    while(cont2>0){
+    
+        cont2=divisor/2;
+        divisor2=divisor%2;
+        divisor=cont2;
+        binario[cont]=divisor2;
+        if(cont2>0){
+            cont++;
+        }
     }
-    cout<<"Your integer number translated to binary number is:\n";
-    for(i=c;i>=0;i--){
-        cout<<bin[i];
+    
+    cout<<"\nEl número " <<numero <<" en binario es: \n";
+    
+    //Loop to print the binary number
+    for(int i=cont; i>=0; i--){
+        cout<<binario[i];
     }
-
+    
     return 0;
 }
