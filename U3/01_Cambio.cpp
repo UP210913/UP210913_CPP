@@ -9,53 +9,31 @@ Description: Programa que pide un monto de dinero e imprime la cantidad de bille
 using namespace std;
 
 void obtenerCambio(int);
-void imprimirCambio(string);
+void imprimirCambio(int);
 
 int quinientos = 0, doscientos = 0, cien = 0, cincuenta = 0, veinte = 0, diez = 0, cinco = 0, dos = 0, uno = 0; 
-int dinero;
+int dinero, cambio[9]={500,200,100,50,20,10,5,2,1}, cantidad[9];
 
 int main(){
     cout<<"Enter the money: ";
     cin>>dinero;
     obtenerCambio(dinero);
-    
+    imprimirCambio(dinero);
+
+    return 0;
 }
 
 void obtenerCambio(int dinero){
-    while(dinero>=500){
-        dinero-=500;
-        quinientos++;
+    for(int i=0; i<9; i++){
+        while(dinero>=cambio[i]){
+            dinero-=cambio[i];
+            cantidad[i]++;
+        }
     }
-    while(dinero>=200){
-        dinero-=200;
-        doscientos++;
-    }
-    while(dinero>=100){
-        dinero-=100;
-        cien++;
-    }
-    while(dinero>=50){
-        dinero-=50;
-        cincuenta++;
-    }
-    while(dinero>=20){
-        dinero-=20;
-        veinte++;
-    }
-    while(dinero>=10){
-        dinero-=10;
-        diez++;
-    }
-    while(dinero>=5){
-        dinero-=5;
-        cinco++;
-    }
-    while(dinero>=2){
-        dinero-=2;
-        dos++;
-    }
-    while(dinero>=1){
-        dinero-=1;
-        uno++;
+}
+
+void imprimirCambio(int dinero){
+    for(int i=0; i<9; i++){
+        cout<<"Bills of " <<cambio[i] <<" = " <<cantidad[i] <<"\n";
     }
 }
