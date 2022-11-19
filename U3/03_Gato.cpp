@@ -4,11 +4,11 @@ Email: up210913@alumnos.upa.edu.mx
 Description: This is a tic tac toe game, using functions, cycles and conditions.
 */
 
+//Library to avoid "std::"
 #include <iostream>
-#include <stdalign.h>
-#include <time.h>
 using namespace std;
 
+//Functions to use in the main function. Their descrptions are before each function.
 void board();
 int selectPlay();
 bool checkPlay(int, string);
@@ -43,14 +43,12 @@ int main()
     cout << "1.- Player vs CPU\n";
     cout << "2.- Player vs Player\n";
     cin >> mode;
-    
+    cout<<"Player 1: 'X'      Player 2 / PC: 'O'\n";
     if (mode == 1)
     {
         //Make a series of functions if you choose the single mode vs PC
         do
-        {
-            //This line clean the screen
-            system("clear");
+        {            
             if (playerTurn % 2 == !0)
             {
                 //Cycle to check if the position is occupied
@@ -61,7 +59,7 @@ int main()
                     ocupiedSquare = checkPlay(play, BOARD);
                     if (ocupiedSquare == true)
                     {
-                        system("clear");
+                        
                         cout << "Select another position\n";
                     }
                 } while (ocupiedSquare == true);
@@ -72,12 +70,13 @@ int main()
             {
                 //Make a play to PC
                 board();
+                cout<<"PC move\n";
                 play = getpcPlay();
                 placePlay(play, BOARD, PC);
                 gameover = ganar(BOARD);
             }
         } while (gameover == false and playerTurn < 10);
-        system("clear");
+        
         board();
     }
     else if (mode == 2)
@@ -85,7 +84,6 @@ int main()
     {
         do
         {
-            system("clear");
             do
             {
                 board();
@@ -93,14 +91,13 @@ int main()
                 ocupiedSquare = checkPlay(play, BOARD);
                 if (ocupiedSquare == true)
                 {
-                    system("clear");
+                    
                     cout << "Select another position\n";
                 }
             } while (ocupiedSquare == true);
             placePlay(play, BOARD, HUMAN);
             gameover = ganar(BOARD);
-        } while (gameover == false and playerTurn < 10);
-        system("clear");
+        } while (gameover == false and playerTurn < 10);  
         board();
     }
 
@@ -167,11 +164,11 @@ void board()
     {
         for (int col1 = 0; col1 < 11; col1++)
         {
-            if (structureTTE[row1][col1] == 'X')
+            if (structureTTE[row1][col1] == 'O')
             {
                 cout << "\033[0;31m" << structureTTE[row1][col1] << "\033[0m";
             }
-            else if (structureTTE[row1][col1] == 'O')
+            else if (structureTTE[row1][col1] == 'X')
             {
                 cout<<"\033[0;32m" << structureTTE[row1][col1] << "\033[0m";
             }
@@ -197,13 +194,13 @@ int selectPlay()
 }
 
 //Function to check if the position is occupied
-bool checkPlay(int play, string Tablero)
+bool checkPlay(int play, string board)
 {
     bool ocupiedSquare = false;
     int row2 = 0, col2 = 0;
-    for (int numjuada = 1; numjuada < 10; numjuada++)
+    for (int NumPlay = 1; NumPlay < 10; NumPlay++)
     {
-        if (play == numjuada)
+        if (play == NumPlay)
         {
             row = row2;
             col = col2;
@@ -219,16 +216,16 @@ bool checkPlay(int play, string Tablero)
             }
         }
     }
-    if (Tablero == BOARD)
+    if (board == BOARD)
     {
-        if (playArea[row][col] == 'O' || playArea[row][col] == 'X')
+        if (playArea[row][col] == 'X' || playArea[row][col] == 'O')
         {
             ocupiedSquare = true;
         }
     }
-    else if (Tablero == IMAGINARYBOARD)
+    else if (board == IMAGINARYBOARD)
     {
-        if (playAreaPC[row][col] == 'O' || playAreaPC[row][col] == 'X')
+        if (playAreaPC[row][col] == 'X' || playAreaPC[row][col] == 'O')
         {
             ocupiedSquare = true;
         }
@@ -237,38 +234,38 @@ bool checkPlay(int play, string Tablero)
 }
 
 //Function to put the move on the board
-void placePlay(int play, string Tablero, string Jugador)
+void placePlay(int play, string board, string Player)
 {
-    char valorJugada;
+    char PlayValue;
     if (playerTurn % 2 == 0)
     {
-        valorJugada = 'X';
+        PlayValue = 'O';
     }
     else
     {
-        valorJugada = 'O';
+        PlayValue = 'X';
     }
     int row2 = 0, col2 = 0;
-    for (int numjuada = 1; numjuada < 10; numjuada++)
+    for (int NumPlay = 1; NumPlay < 10; NumPlay++)
     {
-        if (play == numjuada)
+        if (play == NumPlay)
         {
-            if (Tablero == BOARD)
+            if (board == BOARD)
             {
-                playArea[row2][col2] = valorJugada;
+                playArea[row2][col2] = PlayValue;
                 break;
             }
-            else if (Tablero == IMAGINARYBOARD)
+            else if (board == IMAGINARYBOARD)
             {
-                if (Jugador == HUMAN)
+                if (Player == HUMAN)
                 {
-                    valorJugada = 'O';
+                    PlayValue = 'X';
                 }
-                else if (Jugador == PC)
+                else if (Player == PC)
                 {
-                    valorJugada = 'X';
+                    PlayValue = 'O';
                 }
-                playAreaPC[row2][col2] = valorJugada;
+                playAreaPC[row2][col2] = PlayValue;
                 break;
             }
         }
@@ -282,18 +279,18 @@ void placePlay(int play, string Tablero, string Jugador)
             }
         }
     }
-    if (Tablero == BOARD){
+    if (board == BOARD){
         playerTurn++;
     }
 }
 
 //Function to check if has a winner player
-bool ganar(string tablero)
+bool ganar(string board)
 {
     bool ganar = false;
     for (int position = 0; position < 3; position++)
     {
-        if (tablero == BOARD)
+        if (board == BOARD)
         {
             if (playArea[position][0] == playArea[position][1] && playArea[position][position] == playArea[position][2] && playArea[position][1] == playArea[position][2])
             {
@@ -306,7 +303,7 @@ bool ganar(string tablero)
                 break;
             }
         }
-        else if (tablero == IMAGINARYBOARD)
+        else if (board == IMAGINARYBOARD)
         {
             if (playAreaPC[position][0] == playAreaPC[position][1] && playAreaPC[position][position] == playAreaPC[position][2] && playAreaPC[position][1] == playAreaPC[position][2])
             {
@@ -320,7 +317,7 @@ bool ganar(string tablero)
             }
         }
     }
-    if (tablero == BOARD)
+    if (board == BOARD)
     {
         if (playArea[0][0] == playArea[1][1] && playArea[0][0] == playArea[2][2] && playArea[1][1] == playArea[2][2]) 
         {
@@ -331,7 +328,7 @@ bool ganar(string tablero)
             ganar = true;
         }
     } 
-    else if (tablero == IMAGINARYBOARD)
+    else if (board == IMAGINARYBOARD)
     {
         if (playAreaPC[0][0] == playAreaPC[1][1] && playAreaPC[0][0] == playAreaPC[2][2] && playAreaPC[1][1] == playAreaPC[2][2])
         {
@@ -369,7 +366,7 @@ int getpcPlay()
     return play;
 }
 
-//Function to clene the board in the game, to check the best play for PC later
+//Function to clone the board in the game, to check the best play for PC later
 void cloneArray(){
     for (int row2 = 0; row2 < 3; row2++)
     {
@@ -381,13 +378,13 @@ void cloneArray(){
 }
 
 //Function to check which is the best play
-int bestPlay(string jugador)
+int bestPlay(string Player)
 {
     bool ocupiedSquare = false;
     bool gameover = false;
     int play = 0;
     cloneArray();
-    if (jugador == PC)
+    if (Player == PC)
     {
         do
         {
@@ -400,7 +397,7 @@ int bestPlay(string jugador)
             cloneArray();
         } while (play <= 9 && gameover == false);
     } 
-    else if (jugador == HUMAN)
+    else if (Player == HUMAN)
     {
         do
         {
