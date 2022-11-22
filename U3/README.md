@@ -47,7 +47,7 @@ The game ends when one player wins or when the positions on the board run out.
 
 *d) When the game is tied*
 
-<img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/gd.png?raw=true" width="300" height="150"/>
+<img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/gd.png?raw=true" width="200" height="150"/>
 
 ## Flowchart
 
