@@ -11,7 +11,7 @@
 
 [3. Development and explanation](##_Development_and_explanation)
 
-[4. Conclusion](##_Conclusion)
+[4. Conclusion](#conclusion)
 
 ## Instructions for use and recommendations
 
