@@ -53,6 +53,10 @@ The game ends when one player wins or when the positions on the board run out.
 
 Now, you will see a flowchart of the Tic Tac Toe Game. It was made in a web page using the functions used in the code.
 
+<p align="center">
+<img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/DG.png?raw=true" width="1000" height="750"/>
+</p>
+
 ## Development and explanation
 
 This program was developed and created in Visual Studio Code. Many tests were made to observe and correct execution or code errors. With the execution tests, ideas were also thought to improve the aesthestics of the game, improvements in the process of the games, and how the texts of the program are printed.
