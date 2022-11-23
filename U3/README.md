@@ -5,11 +5,11 @@
 
 ## Index
 
-[1. Instructions for use and recommendations](##_Instructions_for_use_and_recommendations)
+[1. Instructions for use and recommendations](#instructions-for-use-and-recommendations)
 
-[2. Flowchart](##_Flowchart)
+[2. Flowchart](#flowchart)
 
-[3. Development and explanation](##_Development_and_explanation)
+[3. Development and explanation](#development-and-explanation)
 
 [4. Conclusion](#conclusion)
 
@@ -52,6 +52,8 @@ The game ends when one player wins or when the positions on the board run out.
 
 <img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/gd.png?raw=true" width="200" height="150"/>
 
+[Back to index](#index)
+
 ## Flowchart
 
 Now, you will see a flowchart of the Tic Tac Toe Game. It was made in a web page using the functions used in the code.
@@ -59,6 +61,8 @@ Now, you will see a flowchart of the Tic Tac Toe Game. It was made in a web page
 <p align="center">
 <img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/DG.png?raw=true" width="1000" height="750"/>
 </p>
+
+[Back to index](#index)
 
 ## Development and explanation
 
@@ -69,6 +73,8 @@ Now you can see examples of situations whit the code running. Here, you can see 
 <img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/vsc.png?raw=true" width="400" height="400"/>
 </p>
 
+[Back to index](#index)
+
 ## Conclusion
 
 To end, a conclusion will be given about of the game code, the complications that occurred in the process and making possible the situations that may exist in the game. From my point of view, the most difficult part of the code was making the artificial intelligence, complicated on the one hand and very slow on the other. The result was as expected and the objective was met. In terms of aesthetics, it was also very good in terms of color alone, graphically not much attention is still paid. It only remains to hope that they like it. Thanks for your attention.
@@ -76,3 +82,5 @@ To end, a conclusion will be given about of the game code, the complications tha
 <p align="center">
 <img src="https://github.com/UP210913/UP210913_CPP/blob/main/imagenes/image.jpeg?raw=true" width="300" height="300"/>
 </p>
+
+[Back to index](#index)
