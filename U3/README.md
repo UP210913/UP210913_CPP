@@ -5,13 +5,13 @@
 
 ## Index
 
-[1. Instructions for use and recommendations](#_Instructions_for_use_and_recommendations)
+[1. Instructions for use and recommendations](##_Instructions_for_use_and_recommendations)
 
-[2. Flowchart](#_Flowchart)
+[2. Flowchart](##_Flowchart)
 
-[3. Development and explanation](#_Development_and_explanation)
+[3. Development and explanation](##_Development_and_explanation)
 
-[4. Conclusion](#_Conclusion)
+[4. Conclusion](##_Conclusion)
 
 ## Instructions for use and recommendations
 
