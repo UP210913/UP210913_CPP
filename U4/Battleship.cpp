@@ -22,7 +22,7 @@ int main()
     //C:Corvette
 
     int i,j,k=0,x,y,chk=0,win=0,uposa[5][2],uposb[4][2],uposd[3][2],uposc[2][2],a=0,b=0,c=0,d=0,probab,diff;
-    char gridu[10][10],griduv[10][10],gridc[10][10],gridcv[10][10],orin[2],tempstr[10],str[20]="Welcome to the Battleship",str1[50]="the team the bellakos",ch;
+    char gridu[10][10],griduv[10][10],gridc[10][10],gridcv[10][10],orin[2],tempstr[10],str[30]="Welcome to the Battleship",str1[50]="We are team 7",ch;
 
     for(i=0;i<10;i++)
     {
@@ -78,7 +78,7 @@ int main()
         if(ch==50)
         {
             system("cls");
-            printf("“Oorah!” Get ready for the war!\n");
+            printf("Get ready for the war!\n");
             printf("1. You have to destroy your opponent's war ships before he destroys yours.\n");
             printf("2. The battlefield is of 10x10 grid size in which you place your ships\n");
             printf("3. You can place your ships by entering its orientation, i.e horizontal or vertical. For horizontal orientation, type 'h' in the orientation option and type 'v' for vertical\n");
