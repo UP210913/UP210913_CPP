@@ -1,7 +1,7 @@
 
 #include<stdio.h>
 #include<strings.h>
-#include<conio.h>
+#include <conio.h>
 #include<time.h>
 
 void delay(clock_t a)
